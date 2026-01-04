@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, BarChart2, FileText, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/practice", label: "Practice PYQs", icon: BookOpen },
@@ -18,10 +19,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-primary">
-            <span className="font-display text-lg font-bold text-primary-foreground">J</span>
-          </div>
-          <span className="font-display text-xl font-bold text-foreground">JEE Prep</span>
+          <img src={logo} alt="Brainiyo Logo" className="h-9 w-9 object-contain" />
+          <span className="font-display text-xl font-bold text-foreground">Brainiyo</span>
         </Link>
 
         {/* Desktop Navigation */}
