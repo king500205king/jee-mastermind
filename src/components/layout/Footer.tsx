@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const footerLinks = {
   practice: [
@@ -29,10 +30,8 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-primary">
-                <span className="font-display text-lg font-bold text-primary-foreground">J</span>
-              </div>
-              <span className="font-display text-xl font-bold text-foreground">JEE Prep</span>
+              <img src={logo} alt="Brainiyo Logo" className="h-9 w-9 object-contain" />
+              <span className="font-display text-xl font-bold text-foreground">Brainiyo</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Your complete preparation platform for JEE Main & Advanced.
@@ -82,7 +81,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} JEE Prep. All rights reserved.
+            © {new Date().getFullYear()} Brainiyo. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Made with ❤️ for JEE Aspirants
